@@ -22,8 +22,15 @@
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="<?= base_url('/'); ?>">Home</a>
                     <a class="nav-link" href="<?= base_url('pages/about'); ?>">About</a>
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="<?= base_url('pages/contact'); ?>">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- put your content here -->
+    <?= $this->renderSection('content'); ?>
+
+</body>
+
+</html>
