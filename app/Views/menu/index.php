@@ -15,12 +15,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td><img src="https://raw.githubusercontent.com/mdchrysan/my-online-asset/main/fcc-rwd/migor.png" alt="img here" height="100"></td>
-                        <td>Indomie Goreng</td>
-                        <td><a href="" class="btn btn-dark">Details</a></td>
-                    </tr>
+                    <?php foreach ($menu as $m) : ?>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td><img src="<?= $m['image']; ?>" alt="img here" height="100"></td>
+                            <td><?= $m['name']; ?></td>
+                            <td><a href="" class="btn btn-dark">Details</a></td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
