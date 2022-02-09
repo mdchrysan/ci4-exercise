@@ -15,12 +15,13 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php $i = 1; ?>
                     <?php foreach ($menu as $m) : ?>
                         <tr>
-                            <th scope="row">1</th>
+                            <th scope="row"><?= $i++; ?></th>
                             <td><img src="<?= $m['image']; ?>" alt="img here" height="100"></td>
                             <td><?= $m['name']; ?></td>
-                            <td><a href="" class="btn btn-dark">Details</a></td>
+                            <td><a href="/menu/<?= $m['slug']; ?>" class="btn btn-dark">Details</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
