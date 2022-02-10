@@ -4,7 +4,10 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h1 class="mt-5">Daftar Menu Warmindo</h1>
+            <div class="row mt-5">
+                <h1 class="col-md-10">Daftar Menu Warmindo</h1>
+                <a href="/menu/create" class="col-md-2 btn btn-dark mb-3">Add Menu</a>
+            </div>
             <table class="table table-hover align-middle">
                 <thead>
                     <tr>
