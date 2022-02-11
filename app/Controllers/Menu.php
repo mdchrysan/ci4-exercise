@@ -46,4 +46,12 @@ class Menu extends BaseController
         ];
         return view('menu/details', $data);
     }
+
+    public function create()
+    {
+        $data = [
+            'title' => 'Add Menu Form | MyExercise'
+        ];
+        return view('menu/create', $data);
+    }
 }
