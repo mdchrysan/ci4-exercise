@@ -7,15 +7,21 @@
             <h2 class="col-8">Add Menu Form</h2>
             <form>
                 <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Menu Name</label>
+                    <label for="menuName" class="col-sm-2 col-form-label">Menu Name</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
+                        <input type="text" class="form-control" id="menuName" name="menuName">
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Description</label>
+                    <label for="description" class="col-sm-2 col-form-label">Description</label>
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword3">
+                        <input type="text" class="form-control" id="description" name="description">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="price" class="col-sm-2 col-form-label">Price</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="price" name="price">
                     </div>
                 </div>
                 <fieldset class="row mb-3">
