@@ -54,4 +54,9 @@ class Menu extends BaseController
         ];
         return view('menu/create', $data);
     }
+
+    public function saveMenu()
+    {
+        $this->request->getVar();
+    }
 }
