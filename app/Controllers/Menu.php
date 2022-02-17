@@ -57,6 +57,6 @@ class Menu extends BaseController
 
     public function saveMenu()
     {
-        $this->request->getVar();
+        dd($this->request->getVar());
     }
 }

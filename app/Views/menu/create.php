@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2 class="col-8">Add Menu Form</h2>
+            <h2 class="col-8 mt-5">Add Menu Form</h2>
             <form action="/menu/saveMenu" method="POST">
                 <?= csrf_field(); ?>
                 <div class="row mb-3">
@@ -43,7 +43,7 @@
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
                             <label class="form-check-label" for="gridRadios2">
-                                Roti Bakar
+                                Minuman
                             </label>
                         </div>
                         <div class="form-check disabled">
@@ -58,7 +58,7 @@
                     <legend class="col-form-label col-sm-2 pt-0">Subcategory</legend>
                     <div class="col-sm-10">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
                             <label class="form-check-label" for="gridRadios1">
                                 Goreng
                             </label>
