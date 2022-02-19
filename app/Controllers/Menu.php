@@ -44,6 +44,12 @@ class Menu extends BaseController
             'title' => 'Details | MyExercise',
             'menu' => $this->menuModel->getMenu($slug)
         ];
+
+        // handling menu not in table
+        if (empty($data['menu'])) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Menu ' . $slug . ' is not found.');
+        }
+
         return view('menu/details', $data);
     }
 
