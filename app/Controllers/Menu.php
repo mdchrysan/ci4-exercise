@@ -76,6 +76,6 @@ class Menu extends BaseController
             'image' => $this->request->getVar('image'),
             'category' => $this->request->getVar('category'),
             'subcategory' => $this->request->getVar('subcategory')
-        ])
+        ]);
     }
 }
