@@ -22,33 +22,33 @@
                 <div class="row mb-3">
                     <label for="price" class="col-sm-2 col-form-label">Price</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" id="price" name="price">
+                        <input type="number" class="form-control" id="price" name="price" placeholder="15000">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label for="image" class="col-sm-2 col-form-label">Image</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="image" name="image">
+                        <input type="text" class="form-control" id="image" name="image" placeholder="food.PNG">
                     </div>
                 </div>
                 <fieldset class="row mb-3">
                     <legend class="col-form-label col-sm-2 pt-0">Category</legend>
                     <div class="col-sm-10">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                            <label class="form-check-label" for="gridRadios1">
+                            <input class="form-check-input" type="radio" name="catRadios" id="category1" value="Indomie" checked>
+                            <label class="form-check-label" for="category1">
                                 Indomie
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                            <label class="form-check-label" for="gridRadios2">
+                            <input class="form-check-input" type="radio" name="catRadios" id="category2" value="Minuman">
+                            <label class="form-check-label" for="category2">
                                 Minuman
                             </label>
                         </div>
-                        <div class="form-check disabled">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-                            <label class="form-check-label" for="gridRadios3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="catRadios" id="category3" value="Cemilan">
+                            <label class="form-check-label" for="category3">
                                 Cemilan
                             </label>
                         </div>
@@ -58,26 +58,26 @@
                     <legend class="col-form-label col-sm-2 pt-0">Subcategory</legend>
                     <div class="col-sm-10">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
-                            <label class="form-check-label" for="gridRadios1">
+                            <input class="form-check-input" type="radio" name="subcatRadios" id="subcat1" value="Goreng" checked>
+                            <label class="form-check-label" for="subcat1">
                                 Goreng
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                            <label class="form-check-label" for="gridRadios2">
+                            <input class="form-check-input" type="radio" name="subcatRadios" id="subcat2" value="Kuah">
+                            <label class="form-check-label" for="subcat2">
                                 Kuah
                             </label>
                         </div>
-                        <div class="form-check disabled">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-                            <label class="form-check-label" for="gridRadios3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="subcatRadios" id="subcat3" value="Gorengan">
+                            <label class="form-check-label" for="subcat3">
                                 Gorengan
                             </label>
                         </div>
-                        <div class="form-check disabled">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-                            <label class="form-check-label" for="gridRadios3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="subcatRadios" id="subcat4" value="Bakaran">
+                            <label class="form-check-label" for="subcat4">
                                 Bakaran
                             </label>
                         </div>

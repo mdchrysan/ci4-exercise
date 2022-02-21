@@ -64,19 +64,19 @@ class Menu extends BaseController
     public function saveMenu()
     {
         //create human-friendly URL string
-        $slug = url_title($this->request->getVar('name'), '-', true);
+        //$slug = url_title($this->request->getVar('name'), '-', true);
 
-        //dd($this->request->getVar());
+        dd($this->request->getVar());
         //save to db
-        $this->menuModel->save([
-            'name' => $this->request->getVar('name'),
-            'slug' => $slug,
-            'category' => $this->request->getVar('category'),
-            'subcategory' => $this->request->getVar('subcategory'),
-            'description' => $this->request->getVar('description'),
-            'price' => $this->request->getVar('price'),
-            'image' => $this->request->getVar('image')
-        ]);
-        return redirect()->to('/menu');
+        // $this->menuModel->save([
+        //     'name' => $this->request->getVar('name'),
+        //     'slug' => $slug,
+        //     'category' => $this->request->getVar('category'),
+        //     'subcategory' => $this->request->getVar('subcategory'),
+        //     'description' => $this->request->getVar('description'),
+        //     'price' => $this->request->getVar('price'),
+        //     'image' => $this->request->getVar('image')
+        // ]);
+        // return redirect()->to('/menu');
     }
 }
