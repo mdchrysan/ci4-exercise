@@ -47,7 +47,7 @@ class Menu extends BaseController
 
         // handling menu not in table
         if (empty($data['menu'])) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Menu ' . $slug . ' is not found.');
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Menu "' . $slug . '" is not found.');
         }
 
         return view('menu/details', $data);
@@ -71,11 +71,12 @@ class Menu extends BaseController
         $this->menuModel->save([
             'name' => $this->request->getVar('name'),
             'slug' => $slug,
+            'category' => $this->request->getVar('category'),
+            'subcategory' => $this->request->getVar('subcategory'),
             'description' => $this->request->getVar('description'),
             'price' => $this->request->getVar('price'),
-            'image' => $this->request->getVar('image'),
-            'category' => $this->request->getVar('category'),
-            'subcategory' => $this->request->getVar('subcategory')
+            'image' => $this->request->getVar('image')
         ]);
+        return redirect()->to('/menu');
     }
 }
