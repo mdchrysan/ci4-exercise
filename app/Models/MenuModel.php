@@ -8,6 +8,7 @@ class MenuModel extends Model
 {
     protected $table      = 'menu';
     protected $primaryKey = 'id';
+    protected $allowedFields = ['name', 'slug', 'category', 'subcategory', 'description', 'price', 'image'];
 
     //protected $useSoftDeletes = true;
 
