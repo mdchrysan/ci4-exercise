@@ -4,6 +4,11 @@
 <div class="container">
     <div class="row">
         <div class="col">
+            <?php if (session()->getFlashdata('msg')) : ?>
+                <div class="alert alert-success" role="alert">
+                    <?= session()->getFlashdata('msg'); ?>
+                </div>
+            <?php endif ?>
             <div class="row mt-5">
                 <h1 class="col-md-10">Daftar Menu Warmindo</h1>
                 <a href="/menu/create" class="col-md-2 btn btn-dark mb-3">Add Menu</a>

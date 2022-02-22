@@ -77,6 +77,9 @@ class Menu extends BaseController
         //     'price' => $this->request->getVar('price'),
         //     'image' => $this->request->getVar('image')
         // ]);
+
+        // session()->setFlashdata('msg', 'Menu Created');
+
         // return redirect()->to('/menu');
     }
 }
