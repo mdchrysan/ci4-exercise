@@ -55,14 +55,29 @@ class Menu extends BaseController
 
     public function create()
     {
+        session();
         $data = [
-            'title' => 'Add Menu Form | MyExercise'
+            'title' => 'Add Menu Form | MyExercise',
+            'validation' => \Config\Services::validation()
         ];
         return view('menu/create', $data);
     }
 
     public function saveMenu()
     {
+        //input validaton
+        if (!$this->validate([
+            'name' => 'required|is_unique[menu.name]',
+            'price' => 'greater_than_equal_to[1000]'
+        ])) {
+            $validation = \Config\Services::validation();
+            // dd($validation);
+            // $data['validation'] = $validation;
+            // return view('/menu/create', $data);
+            return redirect()->to('/menu/create')->withInput()->with('validation', $validation);
+            // and then go to method create
+        }
+
         //create human-friendly URL string
         $slug = url_title($this->request->getVar('menuName'), '-', true);
 

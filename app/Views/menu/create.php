@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
+            <?= $validation->listErrors(); ?>
             <h2 class="col-8 mt-5">Add Menu Form</h2>
             <form action="/menu/saveMenu" method="POST">
                 <?= csrf_field(); ?>
