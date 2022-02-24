@@ -11,7 +11,12 @@
                 <div class="row mb-3">
                     <label for="menuName" class="col-sm-2 col-form-label">Menu Name</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="menuName" name="menuName" autofocus>
+                        <!-- ternary operation for is-invalid class -->
+                        <input type="text" class="form-control <?= ($validation->hasError('name')) ? 'is-invalid' : ''; ?>" id="menuName" name="menuName" autofocus>
+                        <div class="invalid-feedback">
+                            <!-- Menu name cannot be empty. -->
+                            <?= $validation->getError('name'); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -23,7 +28,12 @@
                 <div class="row mb-3">
                     <label for="price" class="col-sm-2 col-form-label">Price</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" id="price" name="price" placeholder="15000">
+                        <!-- ternary operation for is-invalid class -->
+                        <input type="number" class="form-control <?= ($validation->hasError('price')) ? 'is-invalid' : ''; ?>" id="price" name="price" placeholder="15000">
+                        <div class="invalid-feedback">
+                            <!-- Price should be in thousand rupiah. -->
+                            <?= $validation->getError('price'); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="row mb-3">

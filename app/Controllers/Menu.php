@@ -55,7 +55,7 @@ class Menu extends BaseController
 
     public function create()
     {
-        session();
+        // session();   // moved to BaseController
         $data = [
             'title' => 'Add Menu Form | MyExercise',
             'validation' => \Config\Services::validation()
