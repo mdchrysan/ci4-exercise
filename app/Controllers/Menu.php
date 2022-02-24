@@ -67,8 +67,17 @@ class Menu extends BaseController
     {
         //input validaton
         if (!$this->validate([
-            'name' => 'required|is_unique[menu.name]',
-            'price' => 'greater_than_equal_to[1000]'
+            'name' => [
+                'rules' => 'required|is_unique[menu.name]',
+                'errors' => [
+                    'required' => 'Menu {field} cannot be empty.',
+                    'is_unique' => 'This {field} has already been taken.'
+                ]
+            ],
+            'price' => [
+                'rules' => 'greater_than_equal_to[1000]',
+                'error' => '{field} should be in thousand rupiah.'
+            ]
         ])) {
             $validation = \Config\Services::validation();
             // dd($validation);

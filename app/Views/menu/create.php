@@ -14,7 +14,6 @@
                         <!-- ternary operation for is-invalid class -->
                         <input type="text" class="form-control <?= ($validation->hasError('name')) ? 'is-invalid' : ''; ?>" id="menuName" name="menuName" autofocus>
                         <div class="invalid-feedback">
-                            <!-- Menu name cannot be empty. -->
                             <?= $validation->getError('name'); ?>
                         </div>
                     </div>
@@ -31,7 +30,6 @@
                         <!-- ternary operation for is-invalid class -->
                         <input type="number" class="form-control <?= ($validation->hasError('price')) ? 'is-invalid' : ''; ?>" id="price" name="price" placeholder="15000">
                         <div class="invalid-feedback">
-                            <!-- Price should be in thousand rupiah. -->
                             <?= $validation->getError('price'); ?>
                         </div>
                     </div>
