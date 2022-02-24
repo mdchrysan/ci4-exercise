@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <?= $validation->listErrors(); ?>
+            <!--?= $validation->listErrors(); ?-->
             <h2 class="col-8 mt-5">Add Menu Form</h2>
             <form action="/menu/saveMenu" method="POST">
                 <?= csrf_field(); ?>
@@ -12,7 +12,7 @@
                     <label for="menuName" class="col-sm-2 col-form-label">Menu Name</label>
                     <div class="col-sm-10">
                         <!-- ternary operation for is-invalid class -->
-                        <input type="text" class="form-control <?= ($validation->hasError('name')) ? 'is-invalid' : ''; ?>" id="menuName" name="menuName" autofocus>
+                        <input type="text" class="form-control <?= ($validation->hasError('name')) ? 'is-invalid' : ''; ?>" id="menuName" name="menuName" value="<?= old('name'); ?>" autofocus>
                         <div class="invalid-feedback">
                             <?= $validation->getError('name'); ?>
                         </div>
@@ -21,14 +21,14 @@
                 <div class="row mb-3">
                     <label for="description" class="col-sm-2 col-form-label">Description</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="description" name="description">
+                        <input type="text" class="form-control" id="description" name="description" value="<?= old('description'); ?>">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label for="price" class="col-sm-2 col-form-label">Price</label>
                     <div class="col-sm-10">
                         <!-- ternary operation for is-invalid class -->
-                        <input type="number" class="form-control <?= ($validation->hasError('price')) ? 'is-invalid' : ''; ?>" id="price" name="price" placeholder="15000">
+                        <input type="number" class="form-control <?= ($validation->hasError('price')) ? 'is-invalid' : ''; ?>" id="price" name="price" placeholder="15000" value="<?= old('price'); ?>">
                         <div class="invalid-feedback">
                             <?= $validation->getError('price'); ?>
                         </div>
@@ -37,7 +37,7 @@
                 <div class="row mb-3">
                     <label for="image" class="col-sm-2 col-form-label">Image</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="image" name="image" placeholder="food.PNG">
+                        <input type="text" class="form-control" id="image" name="image" placeholder="food.PNG" value="<?= old('image'); ?>">
                     </div>
                 </div>
                 <fieldset class="row mb-3">
@@ -92,16 +92,6 @@
                         </div>
                     </div>
                 </fieldset>
-                <!-- <div class="row mb-3">
-                    <div class="col-sm-10 offset-sm-2">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck1">
-                            <label class="form-check-label" for="gridCheck1">
-                                Example checkbox
-                            </label>
-                        </div>
-                    </div>
-                </div> -->
                 <button type="submit" class="btn btn-primary">Add Menu</button>
             </form>
         </div>
