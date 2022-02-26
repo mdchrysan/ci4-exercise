@@ -20,23 +20,23 @@ class Pages extends BaseController
         return view('pages/about', $data);
     }
 
-    public function contact()
+    public function location()
     {
         $data = [
-            'title' => 'Contact | MyExercise',
+            'title' => 'Location | MyExercise',
             'address' => [
                 [
-                    'type' => 'Home',
-                    'address' => 'Kenangan Street No. 12',
-                    'city' => 'Bogor'
+                    'type' => 'Warmindo Abang Adek',
+                    'address' => 'Kemerdekaan Street No. 12',
+                    'city' => 'Jakarta'
                 ],
                 [
-                    'type' => 'Office',
-                    'address' => 'Kemerdekaan Street No. 17',
-                    'city' => 'Jakarta'
+                    'type' => 'Warmindo Pak Kumis',
+                    'address' => 'Kenangan Street No. 17',
+                    'city' => 'Yogyakarta'
                 ],
             ]
         ];
-        return view('pages/contact', $data);
+        return view('pages/location', $data);
     }
 }
