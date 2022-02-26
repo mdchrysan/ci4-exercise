@@ -1,0 +1,9 @@
+.fill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 56px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
