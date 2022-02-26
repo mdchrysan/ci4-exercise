@@ -106,4 +106,10 @@ class Menu extends BaseController
 
         // return redirect()->to('/menu');
     }
+
+    public function delete($id)
+    {
+        $this->menuModel->delete($id);
+        return redirect()->to('/menu');
+    }
 }

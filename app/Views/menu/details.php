@@ -18,7 +18,14 @@
                             <!-- buttons -->
                             <a class="btn btn-primary" href="/menu">Back to Menu</a>
                             <a class="btn btn-warning">Edit</a>
-                            <a class="btn btn-danger">Delete</a>
+                            <!-- spoofing -->
+                            <form action="/menu/<?= $menu['id']; ?>" method="POST" class="d-inline">
+                                <?= csrf_field(); ?>
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button class="btn btn-danger" type="submit">Delete</button>
+                            </form>
+                            <!-- conventional -->
+                            <!-- <a class="btn btn-danger" href="/menu/delete/<!?= $menu['id']; ?>">Delete</a> -->
                         </div>
                     </div>
                 </div>
