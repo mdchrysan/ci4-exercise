@@ -110,6 +110,7 @@ class Menu extends BaseController
     public function delete($id)
     {
         $this->menuModel->delete($id);
+        session()->setFlashdata('msg', 'Menu Deleted');
         return redirect()->to('/menu');
     }
 }

@@ -22,7 +22,7 @@
                             <form action="/menu/<?= $menu['id']; ?>" method="POST" class="d-inline">
                                 <?= csrf_field(); ?>
                                 <input type="hidden" name="_method" value="DELETE">
-                                <button class="btn btn-danger" type="submit">Delete</button>
+                                <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?');">Delete</button>
                             </form>
                             <!-- conventional -->
                             <!-- <a class="btn btn-danger" href="/menu/delete/<!?= $menu['id']; ?>">Delete</a> -->
