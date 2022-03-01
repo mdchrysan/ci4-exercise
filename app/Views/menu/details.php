@@ -17,7 +17,7 @@
                             <p class="card-text"><small class="text-muted">IDR <?= $menu['price']; ?></small></p>
                             <!-- buttons -->
                             <a class="btn btn-primary" href="/menu">Back to Menu</a>
-                            <a class="btn btn-warning">Edit</a>
+                            <a class="btn btn-warning" href="/menu/edit/<?= $menu['slug']; ?>">Edit</a>
                             <!-- spoofing -->
                             <form action="/menu/<?= $menu['id']; ?>" method="POST" class="d-inline">
                                 <?= csrf_field(); ?>
