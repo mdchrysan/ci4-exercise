@@ -113,4 +113,14 @@ class Menu extends BaseController
         session()->setFlashdata('msg', 'Menu Deleted');
         return redirect()->to('/menu');
     }
+
+    public function update($slug)
+    {
+        $data = [
+            'title' => 'Update Menu | MyExercise',
+            'validation' => \Config\Services::validation(),
+            'menu' => $this->menuModel->getMenu($slug);
+        ];
+        return view('menu/update', $data);
+    }
 }
