@@ -119,8 +119,32 @@ class Menu extends BaseController
         $data = [
             'title' => 'Update Menu | MyExercise',
             'validation' => \Config\Services::validation(),
-            'menu' => $this->menuModel->getMenu($slug);
+            'menu' => $this->menuModel->getMenu($slug)
         ];
         return view('menu/update', $data);
+    }
+
+    public function saveUpdate($id)
+    {
+        dd($this->request->getVar());
+        // ci new tech:
+        // submit w/o id = insert, submit w/ id = update
+
+        $slug = url_title($this->request->getVar('menuName'), '-', true);
+
+        $this->menuModel->save([
+            'id' => $id,
+            'name' => $this->request->getVar('menuName'),
+            'slug' => $slug,
+            'category' => $this->request->getVar('category'),
+            'subcategory' => $this->request->getVar('subcategory'),
+            'description' => $this->request->getVar('description'),
+            'price' => $this->request->getVar('price'),
+            'image' => $this->request->getVar('image')
+        ]);
+
+        session()->setFlashdata('msg', 'Menu Updated');
+
+        return redirect()->to('/menu');
     }
 }
