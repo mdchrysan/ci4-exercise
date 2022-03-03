@@ -92,7 +92,8 @@
                         </div>
                     </div>
                 </fieldset>
-                <button type="submit" class="btn btn-primary">Add Menu</button>
+                <a class="btn btn-primary" href="/menu">Back to Menu</a>
+                <button type="submit" class="btn btn-success">Add Menu</button>
             </form>
         </div>
     </div>
