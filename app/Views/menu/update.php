@@ -8,6 +8,7 @@
             <h2 class="col-8 mt-5">Update Menu Form</h2>
             <form action="/menu/update/<?= $menu['id']; ?>" method="POST">
                 <?= csrf_field(); ?>
+                <input type="hidden" name="slug" value="<?= $menu['slug']; ?>">
                 <div class="row mb-3">
                     <label for="menuName" class="col-sm-2 col-form-label">Menu Name</label>
                     <div class="col-sm-10">
