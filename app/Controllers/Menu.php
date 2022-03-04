@@ -130,6 +130,20 @@ class Menu extends BaseController
         // ci new tech:
         // submit w/o id = insert, submit w/ id = update
 
+        if (!$this->validate([
+            'name' => [
+                'rules' => 'required|is_unique[menu.name]',
+                'errors' => [
+                    'required' => 'Menu {field} cannot be empty.',
+                    'is_unique' => 'This {field} has already been taken.'
+                ]
+            ]
+        ])) {
+            $validation = \Config\Services::validation();
+
+            return redirect()->to('/menu/create')->withInput()->with('validation', $validation);
+        }
+
         $slug = url_title($this->request->getVar('menuName'), '-', true);
 
         $this->menuModel->save([
