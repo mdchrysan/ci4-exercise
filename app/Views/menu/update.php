@@ -29,7 +29,7 @@
                     <label for="price" class="col-sm-2 col-form-label">Price</label>
                     <div class="col-sm-10">
                         <!-- ternary operation for is-invalid class -->
-                        <input type="number" class="form-control <?= ($validation->hasError('price')) ? 'is-invalid' : ''; ?>" id="price" name="price" placeholder="15000" value="<?= $menu['price']; ?>">
+                        <input type="number" class="form-control <?= ($validation->hasError('price')) ? 'is-invalid' : ''; ?>" id="price" name="price" value="<?= $menu['price']; ?>">
                         <div class="invalid-feedback">
                             <?= $validation->getError('price'); ?>
                         </div>
@@ -38,10 +38,22 @@
                 <div class="row mb-3">
                     <label for="image" class="col-sm-2 col-form-label">Image</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="image" name="image" placeholder="food.PNG" value="<?= $menu['image']; ?>">
+                        <input type="text" class="form-control" id="image" name="image" value="<?= $menu['image']; ?>">
                     </div>
                 </div>
-                <fieldset class="row mb-3">
+                <div class="row mb-3">
+                    <label for="category" class="col-sm-2 col-form-label">Category</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="category" name="category" value="<?= $menu['category']; ?>">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="subcategory" class="col-sm-2 col-form-label">Subcategory</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="subcategory" name="subcategory" value="<?= $menu['subcategory']; ?>">
+                    </div>
+                </div>
+                <!-- <fieldset class="row mb-3">
                     <legend class="col-form-label col-sm-2 pt-0">Category</legend>
                     <div class="col-sm-10">
                         <div class="form-check">
@@ -92,7 +104,7 @@
                             </label>
                         </div>
                     </div>
-                </fieldset>
+                </fieldset> -->
                 <a class="btn btn-primary" href="/menu">Back to Menu</a>
                 <button type="submit" class="btn btn-warning">Update Menu</button>
             </form>

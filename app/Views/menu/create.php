@@ -40,7 +40,19 @@
                         <input type="text" class="form-control" id="image" name="image" placeholder="food.PNG" value="<?= old('image'); ?>">
                     </div>
                 </div>
-                <fieldset class="row mb-3">
+                <div class="row mb-3">
+                    <label for="category" class="col-sm-2 col-form-label">Category</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="category" name="category" placeholder="Indomie/Minuman/Cemilan" value="<?= old('category'); ?>">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="subcategory" class="col-sm-2 col-form-label">Subcategory</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="subcategory" name="subcategory" placeholder="Goreng/Kuah/Bakaran/Gorengan" value="<?= old('subcategory'); ?>">
+                    </div>
+                </div>
+                <!-- <fieldset class="row mb-3">
                     <legend class="col-form-label col-sm-2 pt-0">Category</legend>
                     <div class="col-sm-10">
                         <div class="form-check">
@@ -91,7 +103,7 @@
                             </label>
                         </div>
                     </div>
-                </fieldset>
+                </fieldset> -->
                 <a class="btn btn-primary" href="/menu">Back to Menu</a>
                 <button type="submit" class="btn btn-success">Add Menu</button>
             </form>
