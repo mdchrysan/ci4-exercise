@@ -130,9 +130,17 @@ class Menu extends BaseController
         // ci new tech:
         // submit w/o id = insert, submit w/ id = update
 
+        $oldMenu = $this->menuModel->getMenu($this->request->getVar('slug'));
+        $newMenu = $this->request->getVar('name');
+        if ($oldMenu['name'] == $newMenu) {
+            $nameRule = 'required';
+        } else {
+            $nameRule = 'required|is_unique[menu.name]';
+        }
+
         if (!$this->validate([
             'name' => [
-                'rules' => 'required|is_unique[menu.name]',
+                'rules' => $nameRule,
                 'errors' => [
                     'required' => 'Menu {field} cannot be empty.',
                     'is_unique' => 'This {field} has already been taken.'
