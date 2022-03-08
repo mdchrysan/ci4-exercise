@@ -36,8 +36,12 @@
                 </div>
                 <div class="row mb-3">
                     <label for="image" class="col-sm-2 col-form-label">Image</label>
-                    <div class="col-sm-10">
+                    <!-- <div class="col-sm-10">
                         <input type="text" class="form-control" id="image" name="image" placeholder="food.PNG" value="<?= old('image'); ?>">
+                    </div> -->
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control" id="inputGroupFile02">
+                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
                     </div>
                 </div>
                 <div class="row mb-3">
