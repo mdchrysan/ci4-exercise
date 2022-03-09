@@ -9,8 +9,14 @@
                     <?= session()->getFlashdata('msg'); ?>
                 </div>
             <?php endif ?>
-            <div class="row mt-5">
-                <h1 class="col-md-10">Daftar Menu Warmindo</h1>
+            <h1 class="mt-5">Daftar Menu Warmindo</h1>
+            <div class="row">
+                <form action="" method="POST" class="col-md-10">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Ketikkan menu yang ingin dicari.." name="keyword">
+                        <button class="btn btn-outline-secondary" type="submit" id="btnCariMenu" name="submit">Cari</button>
+                    </div>
+                </form>
                 <a href="/menu/create" class="col-md-2 btn btn-dark mb-3">Add Menu</a>
             </div>
             <table class="table table-hover align-middle">

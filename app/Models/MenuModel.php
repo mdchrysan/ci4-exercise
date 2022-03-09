@@ -25,4 +25,13 @@ class MenuModel extends Model
         }
         return $this->where(['slug' => $slug])->first();
     }
+
+    public function search($keyword)
+    {
+        // query builder class
+        $builder = $this->table('menu');
+        $builder->like('name', $keyword);
+        return $builder;
+        // return $this->table('menu')->like('name', $keyword);
+    }
 }

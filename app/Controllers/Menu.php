@@ -17,6 +17,7 @@ class Menu extends BaseController
 
     public function index()
     {
+
         //$menuModel = new \App\Models\MenuModel();
         //$menuModel = new MenuModel();
 
@@ -25,10 +26,19 @@ class Menu extends BaseController
         //update this part to use model
         $menu = $this->menuModel->getMenu();
 
+        // d($this->request->getVar('keyword'));
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $this->menuModel->search($keyword);
+        } else {
+            $menu;
+        }
+
         $data = [
             'title' => 'Menu | MyExercise',
             'menu' => $menu
         ];
+
         return view('menu/index', $data);
     }
 
