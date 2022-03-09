@@ -6,7 +6,7 @@
         <div class="col">
             <!--?= $validation->listErrors(); ?-->
             <h2 class="col-8 mt-5">Add Menu Form</h2>
-            <form action="/menu/saveMenu" method="POST">
+            <form action="/menu/saveMenu" method="POST" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <div class="row mb-3">
                     <label for="menuName" class="col-sm-2 col-form-label">Menu Name</label>
@@ -35,13 +35,17 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="image" class="col-sm-2 col-form-label">Image</label>
-                    <!-- <div class="col-sm-10">
+                    <label for="image" class="col-sm-2 col-form-label">Image Link</label>
+                    <div class="col-sm-10">
                         <input type="text" class="form-control" id="image" name="image" placeholder="food.PNG" value="<?= old('image'); ?>">
-                    </div> -->
-                    <div class="input-group mb-3">
-                        <input type="file" class="form-control" id="inputGroupFile02">
-                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="browse" class="col-sm-2 col-form-label">Local Image</label>
+                    <div class="col-sm-10">
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="browse" name="browse">
+                        </div>
                     </div>
                 </div>
                 <div class="row mb-3">
