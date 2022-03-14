@@ -24,18 +24,18 @@ class Pages extends BaseController
     {
         $data = [
             'title' => 'Location | MyExercise',
-            'address' => [
-                [
-                    'type' => 'Warmindo Abang Adek',
-                    'address' => 'Kemerdekaan Street No. 12',
-                    'city' => 'Jakarta'
-                ],
-                [
-                    'type' => 'Warmindo Pak Kumis',
-                    'address' => 'Kenangan Street No. 17',
-                    'city' => 'Yogyakarta'
-                ],
-            ]
+            // 'address' => [
+            //     [
+            //         'type' => 'Warmindo Abang Adek',
+            //         'address' => 'Kemerdekaan Street No. 12',
+            //         'city' => 'Jakarta'
+            //     ],
+            //     [
+            //         'type' => 'Warmindo Pak Kumis',
+            //         'address' => 'Kenangan Street No. 17',
+            //         'city' => 'Yogyakarta'
+            //     ],
+            // ]
         ];
         return view('pages/location', $data);
     }

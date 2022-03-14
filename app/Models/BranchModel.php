@@ -8,7 +8,7 @@ class BranchModel extends Model
 {
     protected $table      = 'location';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['branch_name', 'address'];
+    protected $allowedFields = ['branch_name', 'address', 'city'];
     protected $useTimestamps = true;
 
     public function search($keyword)

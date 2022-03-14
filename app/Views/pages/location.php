@@ -10,7 +10,7 @@
                     <div class="col-sm-4">
                         <div class="card text-center border-warning mb-3">
                             <div class="card-body">
-                                <h5 class="card-title"><strong><?= $a['type']; ?></strong></h5>
+                                <h5 class="card-title"><strong><?= $a['branch_name']; ?></strong></h5>
                                 <p class="card-text"><?= $a['address']; ?></p>
                                 <p class="card-text"><?= $a['city']; ?></p>
                             </div>

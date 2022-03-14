@@ -20,12 +20,12 @@ class Branch extends BaseController
         $branch = $this->branchModel->getBranch();
 
         // d($this->request->getVar('keyword'));
-        $keyword = $this->request->getVar('keyword');
-        if ($keyword) {
-            $this->branchModel->search($keyword);
-        } else {
-            $branch;
-        }
+        // $keyword = $this->request->getVar('keyword');
+        // if ($keyword) {
+        //     $this->branchModel->search($keyword);
+        // } else {
+        //     $branch;
+        // }
 
         $data = [
             'title' => 'Location | MyExercise',
