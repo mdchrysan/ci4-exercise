@@ -8,7 +8,7 @@
             <div class="navbar-nav">
                 <a class="nav-link" href="<?= base_url('/'); ?>">Home</a>
                 <a class="nav-link" href="<?= base_url('/pages/about'); ?>">About</a>
-                <a class="nav-link" href="<?= base_url('/branch/index'); ?>">Location</a>
+                <a class="nav-link" href="<?= base_url('/branch'); ?>">Location</a>
                 <a class="nav-link" href="<?= base_url('/menu'); ?>">Menu</a>
             </div>
         </div>

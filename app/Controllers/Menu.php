@@ -17,7 +17,8 @@ class Menu extends BaseController
 
     public function index()
     {
-
+        $page = $this->request->getVar('page_menu');
+        $currentPage = $page ? $page : 1;
         //$menuModel = new \App\Models\MenuModel();
         //$menuModel = new MenuModel();
 
@@ -36,7 +37,10 @@ class Menu extends BaseController
 
         $data = [
             'title' => 'Menu | MyExercise',
-            'menu' => $menu
+            // 'menu' => $menu
+            'menu' => $this->menuModel->paginate(5, 'menu'),
+            'pager' => $this->menuModel->pager,
+            'currentPage' => $currentPage
         ];
 
         return view('menu/index', $data);

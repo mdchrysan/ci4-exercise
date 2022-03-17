@@ -29,7 +29,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php $i = 1; ?>
+                    <?php $i = 1 + (5 * ($currentPage - 1)); ?>
                     <?php foreach ($menu as $m) : ?>
                         <tr>
                             <th scope="row"><?= $i++; ?></th>
@@ -40,6 +40,8 @@
                     <?php endforeach; ?>
                 </tbody>
             </table>
+            <!-- parameter: table name, pagination name -->
+            <?= $pager->links('menu', 'menu_page') ?>
         </div>
     </div>
 </div>
