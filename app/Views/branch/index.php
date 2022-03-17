@@ -6,13 +6,13 @@
         <div class="col">
             <h1 class="mt-5">You can find us here!</h1>
             <div class="row">
-                <?php foreach ($address as $a) : ?>
+                <?php foreach ($branch as $b) : ?>
                     <div class="col-sm-4">
                         <div class="card text-center border-warning mb-3">
                             <div class="card-body">
-                                <h5 class="card-title"><strong><?= $a['type']; ?></strong></h5>
-                                <p class="card-text"><?= $a['address']; ?></p>
-                                <p class="card-text"><?= $a['city']; ?></p>
+                                <h5 class="card-title"><strong><?= $b['branch_name']; ?></strong></h5>
+                                <p class="card-text"><?= $b['address']; ?></p>
+                                <p class="card-text"><?= $b['city']; ?></p>
                             </div>
                         </div>
                     </div>

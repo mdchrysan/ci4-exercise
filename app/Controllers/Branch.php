@@ -17,7 +17,7 @@ class Branch extends BaseController
 
     public function index()
     {
-        $branch = $this->branchModel->getBranch();
+        // $branch = $this->branchModel->getBranch();
 
         // d($this->request->getVar('keyword'));
         // $keyword = $this->request->getVar('keyword');
@@ -32,6 +32,6 @@ class Branch extends BaseController
             'branch' => $this->branchModel->findAll()
         ];
 
-        return view('pages/location', $data);
+        return view('branch/index', $data);
     }
 }
