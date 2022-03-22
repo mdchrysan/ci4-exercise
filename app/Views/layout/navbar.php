@@ -10,8 +10,12 @@
                 <a class="nav-link" href="<?= base_url('/pages/about'); ?>">About</a>
                 <a class="nav-link" href="<?= base_url('/branch'); ?>">Location</a>
                 <a class="nav-link" href="<?= base_url('/menu'); ?>">Menu</a>
-                <a class="nav-link" href="<?= base_url('/'); ?>">Login</a>
             </div>
+            <?php if (logged_in()) : ?>
+                <a class="nav-link" href="<?= base_url('/logout'); ?>">Logout</a>
+            <?php else : ?>
+                <a class="nav-link" href="<?= base_url('/logout'); ?>">Login</a>
+            <?php endif; ?>
         </div>
     </div>
 </nav>
