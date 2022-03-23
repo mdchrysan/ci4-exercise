@@ -5,8 +5,8 @@
     <div class="row">
         <div class="col">
             <div class="row mt-5">
-                <h1>Apa itu Warmindo?</h1>
-                <p>Warung Indomie Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi voluptas beatae quibusdam molestias consequuntur autem, fugiat rerum qui, impedit dignissimos sapiente nemo odio? Quae, quod doloribus? Illo reprehenderit non itaque!</p>
+                <h2><a href="https://www.behance.net/gallery/31448981/Argon-(Free-Font)" target="_blank">Apa itu Warmindo?</a></h2>
+                <p>KOMPAS.com - Warung makan Indomie (warmindo) merupakan tempat makan mi yang saat ini sedang menjamur di beberapa kota di Indonesia. Sama persis dengan namanya, warmindo menawarkan aneka kreasi makanan dari produk mi instan ternama di Indonesia, Indomie.</p>
             </div>
         </div>
     </div>
